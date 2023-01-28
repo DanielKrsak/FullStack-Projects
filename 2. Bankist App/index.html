@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&amp;display=swap&amp;_cacheOverride=1672753328595"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>Bankist App</title>
+  </head>
+  <body>
+    <header>
+      <p class="welcome--message">Log in to get started</p>
+      <img class="logo" src="./logo.png" alt="bankist-logo" />
+      <form class="login--form">
+        <input
+          class="login--input login__input--username"
+          type="text"
+          placeholder="Username"
+        />
+        <input
+          class="login--input login__input--password"
+          type="text"
+          placeholder="Password"
+        />
+        <button class="btn--login" type="submit">&rarr;</button>
+      </form>
+    </header>
+    <main class="app">
+      <div class="balance">
+        <div>
+          <p class="balance__label">Current Balance</p>
+          <p class="balance__date">As of 05/03/2037</p>
+        </div>
+        <p class="balance__value">0000€</p>
+      </div>
+      <div class="movements"></div>
+      <div class="summary">
+        <p class="summary__label">In</p>
+        <p class="summary__value summary__value--in">27 035,20 €</p>
+        <p class="summary__label">Out</p>
+        <p class="summary__value summary__value--out">1082,61 €</p>
+        <p class="summary__label">Interest</p>
+        <p class="summary__value summary__value--interest">323,46 €</p>
+        <button class="sort">↓ SORT</button>
+      </div>
+      <div class="operation operation__transfer">
+        <h2>Transfer Money</h2>
+        <form class="form">
+          <input type="text" class="form__input form__input--to" />
+          <input type="text" class="form__input form__input--amount" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Transfer to</label>
+          <label class="form__label">Amount</label>
+        </form>
+      </div>
+      <div class="operation operation__loan">
+        <h2>Request Loan</h2>
+        <form class="form">
+          <input type="text" class="form__input form__input--loan" />
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">Amount</label>
+        </form>
+      </div>
+      <div class="operation operation__close--account">
+        <h2>Close Account</h2>
+        <form class="form">
+          <input type="text" class="form__input form__input--user" />
+          <input type="text" class="form__input form__input--password" />
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label class="form__label">Confirm User</label>
+          <label class="form__label">Confirm Password</label>
+        </form>
+      </div>
+      <p class="logout__timer">
+        You will be logged out in
+        <span>00:00</span>
+      </p>
+    </main>
+  </body>
+</html>

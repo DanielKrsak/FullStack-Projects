@@ -1,0 +1,257 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 70%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background-color: #f3f3f3;
+  height: 100vh;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+}
+
+.app {
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  max-width: 100rem;
+  row-gap: 20px;
+  column-gap: 20px;
+  transition: all 1s;
+
+  opacity: 0;
+}
+
+.balance {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  grid-column: 1 / 3;
+}
+
+.balance__date {
+  color: rgb(81, 83, 83);
+  font-size: 1.5rem;
+}
+
+.balance__label {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.balance__value {
+  grid-column: 2;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.btn--login {
+  cursor: pointer;
+  border: none;
+  font-size: 2rem;
+}
+
+.form__btn {
+  background-color: #fff;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 10px;
+}
+
+.form__label--loan {
+  grid-row: 2;
+}
+
+.form__btn--loan {
+  justify-self: flex-start;
+}
+
+.form__label {
+  justify-self: center;
+  font-size: 12px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 2.5fr) 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 10px;
+  justify-items: flex-start;
+  row-gap: 10px;
+  justify-items: center;
+}
+
+.form__input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  text-align: center;
+  font-family: inherit;
+}
+
+.login--form {
+  display: flex;
+  gap: 20px;
+  height: 40px;
+}
+
+.login--input {
+  border: solid 1px #fff;
+  text-align: center;
+  border-radius: 100px;
+  width: 150px;
+  text-align: center;
+  font-family: inherit;
+}
+
+.login--input::-webkit-input-placeholder {
+  color: rgb(183, 180, 180);
+  font-size: 1.5rem;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-150%, 0);
+}
+
+.logout__timer {
+  justify-self: flex-end;
+  align-self: flex-end;
+  font-size: 1.5rem;
+}
+
+.movements {
+  grid-row: 2 / 5;
+  overflow: scroll;
+}
+
+.movements__row {
+  display: flex;
+  background-color: #fff;
+  padding: 1.73rem 1.5rem 1.8rem 3rem;
+  border-bottom: 1px solid rgb(237, 233, 233);
+  align-items: center;
+}
+
+.movements__row:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.movements__row:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.movements__type {
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 3px 7px;
+}
+
+.movements__date {
+  font-size: 1.1rem;
+  margin-left: 1.5rem;
+}
+
+.movements__value {
+  margin-left: auto;
+  font-size: 1.6rem;
+}
+
+.movements__type--deposit {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.movements__type--withdrawal {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.operation__transfer {
+  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+.operation__loan {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.operation__close--account {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.operation {
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  height: 15rem;
+}
+
+.sort {
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.sort:hover {
+  color: #9b9595;
+}
+
+.summary {
+  margin-top: 1rem;
+  display: flex;
+  grid-row: 5;
+  gap: 8px;
+}
+
+.summary__label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.summary__value {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.summary__value--in {
+  color: #66c873;
+}
+.summary__value--out {
+  color: #f5465d;
+}
+
+.summary__value--interest {
+  color: #66c873;
+}
+
+.welcome--message {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
